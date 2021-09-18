@@ -19,6 +19,7 @@
         "react/react-in-jsx-scope": "off",
         "import/no-unresolved": "off",
         "import/extensions": "off",
+        "react/jsx-no-bind": "off",
         "no-unused-vars": "warn",
         "semi": 0,
         "react/jsx-filename-extension": [

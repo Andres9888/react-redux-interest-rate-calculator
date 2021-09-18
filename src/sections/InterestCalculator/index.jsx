@@ -12,8 +12,10 @@ export const InterestCalculator = () => {
       <PrincipalInput />
       <InterestRateInput />
       <YearInput />
-      <Total>{newPrincipal} </Total>
-      <button type="button" onClick={() => dispatch(calculateNewPrinciple())} />
+      <Total>${newPrincipal}</Total>
+      <button type="button" onClick={() => dispatch(calculateNewPrinciple())}>
+        Calculate
+      </button>
     </>
   );
 };

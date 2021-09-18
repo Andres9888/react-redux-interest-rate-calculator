@@ -17,7 +17,6 @@ export const InterestRateInput = () => {
       max={100}
       formatter={(interestRate) => `${interestRate}%`}
       parser={(interestRate) => interestRate.replace('%', '')}
-      // eslint-disable-next-line react/jsx-no-bind
       onChange={onChange}
     />
   );

@@ -10,13 +10,5 @@ export const YearInput = () => {
     dispatch(setYear(year));
   }
 
-  return (
-    <InputNumber
-      min={1}
-      max={100}
-      defaultValue={initialStoreYear}
-      // eslint-disable-next-line react/jsx-no-bind
-      onChange={onChange}
-    />
-  );
+  return <InputNumber min={1} max={100} defaultValue={initialStoreYear} onChange={onChange} />;
 };

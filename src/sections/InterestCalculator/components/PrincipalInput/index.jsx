@@ -16,7 +16,6 @@ export const PrincipalInput = () => {
       formatter={(principal) => `$ ${principal}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
       parser={(principal) => principal.replace(/\$\s?|(,*)/g, '')}
       size="large"
-      // eslint-disable-next-line react/jsx-no-bind
       onChange={onChange}
     />
   );
