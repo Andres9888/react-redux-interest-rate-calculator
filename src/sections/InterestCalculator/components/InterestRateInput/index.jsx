@@ -1,6 +1,6 @@
 import { InputNumber } from 'antd';
-import { selectInterestRate, setInterestRate } from 'features/counter/counterSlice';
-import { useSelector, useDispatch } from 'react-redux';
+import { selectInterestRate, setInterestRate } from 'features/counter/interestRateCalculatorSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const InterestRateInput = () => {
   const initialStoreInterestRate = useSelector(selectInterestRate);
@@ -12,11 +12,11 @@ export const InterestRateInput = () => {
   return (
     <InputNumber
       defaultValue={initialStoreInterestRate}
-      size="large"
-      min={0}
-      max={100}
       formatter={(interestRate) => `${interestRate}%`}
+      max={100}
+      min={0}
       parser={(interestRate) => interestRate.replace('%', '')}
+      size="large"
       onChange={onChange}
     />
   );

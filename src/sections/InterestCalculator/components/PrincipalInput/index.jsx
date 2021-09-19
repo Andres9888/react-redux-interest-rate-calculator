@@ -1,6 +1,6 @@
 import { InputNumber } from 'antd';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectPrincipal, setPrincipal } from 'features/counter/counterSlice';
+import { selectPrincipal, setPrincipal } from 'features/counter/interestRateCalculatorSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const PrincipalInput = () => {
   const initialStorePrincipal = useSelector(selectPrincipal);

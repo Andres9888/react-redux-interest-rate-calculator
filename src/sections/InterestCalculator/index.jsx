@@ -1,8 +1,11 @@
+import {
+  calculateNewPrinciple,
+  selectNewPrincipal,
+} from 'features/counter/interestRateCalculatorSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectNewPrincipal, calculateNewPrinciple } from 'features/counter/counterSlice';
 
-import { PrincipalInput, InterestRateInput, YearInput } from './components';
+import { InterestRateInput, PrincipalInput, YearInput } from './components';
 
 export const InterestCalculator = () => {
   const newPrincipal = useSelector(selectNewPrincipal);
