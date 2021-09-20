@@ -1,10 +1,10 @@
 /* eslint-disable */
 
 import { configureStore } from '@reduxjs/toolkit';
-import interestRateCalculatorReducer from '../features/counter/interestRateCalculatorSlice';
+import interestCalculatorReducer from '../sections/InterestCalculator/interestCalculatorSlice';
 
 export const store = configureStore({
   reducer: {
-    interestRateCalculator: interestRateCalculatorReducer,
+    interestCalculator: interestCalculatorReducer,
   },
 });

@@ -8,8 +8,8 @@ const initialState = {
   year: 1,
 };
 
-export const interestRateCalculatorSlice = createSlice({
-  name: 'interestRateCalculator',
+export const interestCalculatorSlice = createSlice({
+  name: 'interestCalculator',
   initialState,
   // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
@@ -40,15 +40,14 @@ export const interestRateCalculatorSlice = createSlice({
 });
 
 export const { setPrincipal, setInterestRate, setYear, calculateNewPrinciple } =
-  interestRateCalculatorSlice.actions;
+  interestCalculatorSlice.actions;
 
-// The function below is called a selector and allows us to select a value from
-// the state. Selectors can also be defined inline where they're used instead of
+// The function below is called a selector and allows us to select a value fromS
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectCount = (state) => state.interestRateCalculator.value;
-export const selectPrincipal = (state) => state.interestRateCalculator.principal;
-export const selectInterestRate = (state) => state.interestRateCalculator.interestRate;
-export const selectYear = (state) => state.interestRateCalculator.year;
-export const selectNewPrincipal = (state) => state.interestRateCalculator.newPrinciple;
+export const selectCount = (state) => state.interestCalculator.value;
+export const selectPrincipal = (state) => state.interestCalculator.principal;
+export const selectInterestRate = (state) => state.interestCalculator.interestRate;
+export const selectYear = (state) => state.interestCalculator.year;
+export const selectNewPrincipal = (state) => state.interestCalculator.newPrinciple;
 
-export default interestRateCalculatorSlice.reducer;
+export default interestCalculatorSlice.reducer;
