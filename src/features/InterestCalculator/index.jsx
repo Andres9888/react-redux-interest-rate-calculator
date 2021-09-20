@@ -1,8 +1,8 @@
-import { useDispatch, useSelector } from 'react-redux';
 import {
   calculateNewPrinciple,
   selectNewPrincipal,
-} from 'sections/InterestCalculator/interestCalculatorSlice';
+} from 'features/InterestCalculator/interestCalculatorSlice';
+import { useDispatch, useSelector } from 'react-redux';
 import styled from 'styled-components';
 
 import { InterestRateInput, PrincipalInput, YearInput } from './components';

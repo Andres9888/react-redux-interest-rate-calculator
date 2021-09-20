@@ -1,6 +1,6 @@
 import { InputNumber } from 'antd';
+import { selectYear, setYear } from 'features/InterestCalculator/interestCalculatorSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectYear, setYear } from 'sections/InterestCalculator/interestCalculatorSlice';
 
 export const YearInput = () => {
   const initialStoreYear = useSelector(selectYear);

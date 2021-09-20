@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { InterestCalculator } from './sections';
+import { InterestCalculator } from './features';
 import './App.css';
 import 'antd/dist/antd.css';
 

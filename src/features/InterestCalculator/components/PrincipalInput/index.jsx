@@ -1,6 +1,6 @@
 import { InputNumber } from 'antd';
+import { selectPrincipal, setPrincipal } from 'features/InterestCalculator/interestCalculatorSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectPrincipal, setPrincipal } from 'sections/InterestCalculator/interestCalculatorSlice';
 
 export const PrincipalInput = () => {
   const initialStorePrincipal = useSelector(selectPrincipal);

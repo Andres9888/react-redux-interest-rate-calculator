@@ -1,9 +1,9 @@
 import { InputNumber } from 'antd';
-import { useDispatch, useSelector } from 'react-redux';
 import {
   selectInterestRate,
   setInterestRate,
-} from 'sections/InterestCalculator/interestCalculatorSlice';
+} from 'features/InterestCalculator/interestCalculatorSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 export const InterestRateInput = () => {
   const initialStoreInterestRate = useSelector(selectInterestRate);
