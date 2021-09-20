@@ -7,7 +7,7 @@ import interestCalculatorReducer, {
   calculateNewPrinciple,
 } from './interestCalculatorSlice';
 
-describe('Interest Rate Calulator', () => {
+describe('Interest Rate Calculator', () => {
   const initialState = {
     principal: 100,
     newPrinciple: 0,

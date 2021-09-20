@@ -6,9 +6,12 @@ export const YearInput = () => {
   const initialStoreYear = useSelector(selectYear);
   const dispatch = useDispatch();
 
-  function onChange(year) {
-    dispatch(setYear(year));
-  }
-
-  return <InputNumber defaultValue={initialStoreYear} max={100} min={1} onChange={onChange} />;
+  return (
+    <InputNumber
+      defaultValue={initialStoreYear}
+      max={100}
+      min={1}
+      onChange={(year) => dispatch(setYear(year))}
+    />
+  );
 };

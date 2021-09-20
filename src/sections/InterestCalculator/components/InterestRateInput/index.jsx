@@ -9,9 +9,6 @@ export const InterestRateInput = () => {
   const initialStoreInterestRate = useSelector(selectInterestRate);
   const dispatch = useDispatch();
 
-  function onChange(interestRate) {
-    dispatch(setInterestRate(interestRate));
-  }
   return (
     <InputNumber
       defaultValue={initialStoreInterestRate}
@@ -20,7 +17,7 @@ export const InterestRateInput = () => {
       min={0}
       parser={(interestRate) => interestRate.replace('%', '')}
       size="large"
-      onChange={onChange}
+      onChange={(interestRate) => dispatch(setInterestRate(interestRate))}
     />
   );
 };

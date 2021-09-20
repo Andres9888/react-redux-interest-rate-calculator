@@ -4,18 +4,27 @@
         "es6": true
     },
     "parser": "babel-eslint",
+    "settings": {
+        "jest": {
+            "version": "27"
+        }
+    },
     "extends": [
         "react-app",
         "airbnb",
         "plugin:jsx-a11y/recommended",
         "prettier",
         "plugin:import/errors",
-        "plugin:import/warnings"
+        "plugin:import/warnings",
+        "plugin:jest/recommended",
+        "plugin:sonarjs/recommended"
     ],
     "plugins": [
         "jsx-a11y",
         "prettier",
-        "import"
+        "import",
+        "jest",
+        "sonarjs"
     ],
     "rules": {
         "no-param-reassign": "off",
