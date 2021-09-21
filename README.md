@@ -19,6 +19,7 @@ Was Tested on node version: 10.16.0
 Use npm package manager to install .
 
 ```bash
+cd client
 npm install 
 ```
 
