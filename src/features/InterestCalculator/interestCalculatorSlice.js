@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { calculateInterest } from 'utils/calculateInterest';
+import { calculateInterest } from 'helpers/calculateInterest';
 
 const initialState = {
   principal: 100,
@@ -19,9 +19,7 @@ export const interestCalculatorSlice = createSlice({
     // immutable state based off those changes
 
     // Use the PayloadAction type to declare the contents of `action.payload`
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
+
     setPrincipal: (state, action) => {
       state.principal = action.payload;
     },
@@ -44,10 +42,10 @@ export const { setPrincipal, setInterestRate, setYear, calculateNewPrinciple } =
 
 // The function below is called a selector and allows us to select a value fromS
 // in the slice file. For example: `useSelector((state: RootState) => state.counter.value)`
-export const selectCount = (state) => state.interestCalculator.value;
+
 export const selectPrincipal = (state) => state.interestCalculator.principal;
+export const selectNewPrincipal = (state) => state.interestCalculator.newPrinciple;
 export const selectInterestRate = (state) => state.interestCalculator.interestRate;
 export const selectYear = (state) => state.interestCalculator.year;
-export const selectNewPrincipal = (state) => state.interestCalculator.newPrinciple;
 
 export default interestCalculatorSlice.reducer;
